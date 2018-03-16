@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "philly-g0-flow",
-    "description": "This project is really great.",
+    "description": "Mobile Application for Da Philly Go Flow internet radio",
     "slug": "philly-g0-flow",
     "privacy": "public",
     "sdkVersion": "25.0.0",
