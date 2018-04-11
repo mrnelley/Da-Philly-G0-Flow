@@ -188,11 +188,14 @@ $(document).ready(function() {
  rjq('#rjp-radiojar-player').radiojar('player', {
   "streamName": "uzg3ga4mb",
   "enableUpdates": true,
-  "defaultImage": "http://radiojar.com/img/sample_images/Radio_Stations_Avatar_BLUE.png",
+  "defaultImage": "../img/PGF.png",
   "autoplay":false
  });
+
  rjq('#rjp-radiojar-player').off('rj-track-load-event');
  rjq('#rjp-radiojar-player').on('rj-track-load-event', function(event, data) {
+   $('#rj-cover').toggleClass('turned');
+   console.log('turning');
    updateInfo(data);
    if (data.title != "" || data.artist != "") {
      rjq('.rjp-trackinfo-container').show();

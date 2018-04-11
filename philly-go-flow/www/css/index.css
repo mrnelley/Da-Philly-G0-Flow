@@ -142,3 +142,18 @@ h1 {
   height:100%;
   text-align: center;
 }
+
+#rj-cover.turned a img{
+  /* transition: 100ms all ease; */
+  content: url("../img/PGF.jpg");
+  margin-top: 5%;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+/* .jp-play,
+.jp-pause{
+  width: 85vw;
+} */
+.rjp-player-container{
+  left: 30vw;
+}

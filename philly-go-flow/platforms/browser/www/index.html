@@ -35,6 +35,8 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
   <link rel="stylesheet" type="text/css" href="css/player.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alike+Angular|Asul|BioRhyme|Black+Ops+One|Bungee|Bungee+Shade|Concert+One|Creepster|Eczar|Ewert|Fruktur|Gravitas+One|Kavoon|Monoton|Neuton|Rubik:900|Space+Mono|Tillana|Vollkorn|Work+Sans" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="css/index.css" />
 
   <script src="js/jquery.min.js"></script>
@@ -60,12 +62,12 @@
               <div class="jp-controls">
                 <a href="javascript:;" style="display:block" class="jp-play" title="Play">&nbsp;<i class="button play-button"></i></a>
                 <a href="javascript:;" style="display:none" class="jp-pause" title="Pause"><i class="button pause-button"></i></a>
-                <a href="javascript:;" style="display:block" class="jp-mute" title="Mute"><i class="icon-volume-up"> volume up</i></a>
-                <a href="javascript:;" style="display:none" class="jp-unmute" title="Unmute"><i class="icon-volume-off"> volume off </i></a>
-                <div class="jp-volume-bar-wrapper">
-                  <div class="jp-volume-bar">
-                    <div class="jp-volume-bar-value"></div>
-                  </div>
+              </div>
+              <a href="javascript:;" style="display:block" class="jp-mute" title="Mute"><i class="icon-volume-up volume-icon-bg">+</i></a>
+              <a href="javascript:;" style="display:none" class="jp-unmute" title="Unmute"><i class="icon-volume-off volume-icon-bg">X</i></a>
+              <div class="jp-volume-bar-wrapper">
+                <div class="jp-volume-bar">
+                  <div class="jp-volume-bar-value"></div>
                 </div>
               </div>
             </div>
@@ -74,25 +76,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="container">
-    <div class="container" id="rjp-currentshow">
-      <div class="current-info"> -->
-        <!-- <div class="show-title"></div> -->
-        <!-- <a href="#">
-          <div id="cover" class="element element-show-current"></div>
-        </a>
-        <div class="show-title"></div>
-      </div>
-      <div id='player' class="">
-        <button class="button play" href="#">
-          <audio preload="none" type="audio/mpeg" src="http://stream.radiojar.com/uzg3ga4mb">
-
-          </audio>
-        </button>
-      </div>
-    </div>
-  </div> -->
-
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/custom.js" charset="utf-8"></script>
