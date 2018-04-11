@@ -25,11 +25,11 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    /* font-size:12px; */
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    /* text-transform:uppercase; */
     width:100%;
 }
 
@@ -108,24 +108,37 @@ h1 {
   width:80%;
 }
 
-.button {
+.play-button {
   border: 0;
   background: transparent;
   box-sizing: border-box;
-  width: 0;
-  height: 74px;
   border-color: transparent transparent transparent #202020;
   transition: 100ms all ease;
   cursor: pointer;
   border-style: solid;
   border-width: 37px 0 37px 60px;
+}
+
+.pause-button.paused {
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  height: 50px;
+  border-color: transparent transparent transparent #202020;
+  transition: 100ms all ease;
+  cursor: pointer;
+  border-style: double;
+  border-width: 0px 0 0px 60px;
   display: block;
 }
 
-.button.paused {
-  border-style: double;
-  border-width: 0px 0 0px 60px;
-}
 .button:hover {
   border-color: transparent transparent transparent #404040;
+}
+
+.info {
+  background: white;
+  height:100%;
+  text-align: center;
 }

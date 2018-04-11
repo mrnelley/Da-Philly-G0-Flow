@@ -150,24 +150,57 @@ $(document).ready(function() {
   //   return $objcurrshow.each(function() {});
   // }
 
-  rjq('.current-info').radiojar('currentShow', {
-    "streamname": "uzg3ga4mb",
-    "enableUpdates": true,
-    "defaultImage": "//www.radiojar.com/img/sample_images/Radio_Stations_Avatar_BLUE.png",
-    "autoplay":false
+ //  rjq('.current-info').radiojar('currentShow', {
+ //    "streamname": "uzg3ga4mb",
+ //    "enableUpdates": true,
+ //    "defaultImage": "//www.radiojar.com/img/sample_images/Radio_Stations_Avatar_BLUE.png",
+ //    "autoplay":false
+ //  });
+ //
+ //  rjq('#rjp-currentshow').off('track-load-event');
+ //  rjq('#rjp-currentshow').on('track-load-event', function(event, data) {
+ //    console.log(data);
+ //    updateInfo(data);
+ //    if (data.title != "" || data.artist != "") {
+ //     rjq('.rjp-trackinfo-container').show();
+ //     rjq('#trackInfo').html(data.artist + ' - "' + data.title + '"')
+ //    } else {
+ //     rjq('.rjp-trackinfo-container').hide();
+ //    }
+ //  });
+ //
+ // function updateInfo(data) {
+ //   if (data.thumb) {
+ //     rjq('#rj-cover').html('<a href="#"><img src="' + data.thumb + '" alt="" title="" /></a>')
+ //   } else {
+ //     rjq('#rj-cover').html('')
+ //   }
+ //  }
+ //
+ //
+  $('.button').click(function() {
+ //    var audioElement = $('audio');
+    $('.button').toggleClass('paused');
+ //    // console.log(audioElement);
+ //    return audioElement.get(0).paused ? audioElement.get(0).play() : audioElement.get(0).pause();
   });
 
-  rjq('#rjp-currentshow').off('track-load-event');
-  rjq('#rjp-currentshow').on('track-load-event', function(event, data) {
-    console.log(data);
-    updateInfo(data);
-    if (data.title != "" || data.artist != "") {
+ rjq('#rjp-radiojar-player').radiojar('player', {
+  "streamName": "uzg3ga4mb",
+  "enableUpdates": true,
+  "defaultImage": "http://radiojar.com/img/sample_images/Radio_Stations_Avatar_BLUE.png",
+  "autoplay":false
+ });
+ rjq('#rjp-radiojar-player').off('rj-track-load-event');
+ rjq('#rjp-radiojar-player').on('rj-track-load-event', function(event, data) {
+   updateInfo(data);
+   if (data.title != "" || data.artist != "") {
      rjq('.rjp-trackinfo-container').show();
      rjq('#trackInfo').html(data.artist + ' - "' + data.title + '"')
-    } else {
+   } else {
      rjq('.rjp-trackinfo-container').hide();
-    }
-  });
+   }
+ });
 
  function updateInfo(data) {
    if (data.thumb) {
@@ -175,13 +208,5 @@ $(document).ready(function() {
    } else {
      rjq('#rj-cover').html('')
    }
-  }
-
-
-  $('#player').click(function() {
-    var audioElement = $('audio');
-    $('button').toggleClass('paused');
-    // console.log(audioElement);
-    return audioElement.get(0).paused ? audioElement.get(0).play() : audioElement.get(0).pause();
-  });
+ }
 });

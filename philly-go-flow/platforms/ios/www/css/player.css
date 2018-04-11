@@ -452,7 +452,6 @@ ul.icons-ul > li .icon-li {
   height: 80px;
   overflow: hidden;
   position: relative;
-  background: transparent url(../img/stripes-dark.png);
 }
 #rj-player .rjp-player-container .jp-play,
 #rj-player .rjp-player-container .jp-pause {
