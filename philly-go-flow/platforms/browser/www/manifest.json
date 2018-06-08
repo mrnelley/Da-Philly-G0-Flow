@@ -4,8 +4,8 @@
   "name": "PhillyGoFlow",
   "short_name": "PhillyGoFlow",
   "version": "com.example.go",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "description": "A Radio",
+  "author": "Parnell Kelley",
   "icons": [],
   "start_url": "index.html"
 }

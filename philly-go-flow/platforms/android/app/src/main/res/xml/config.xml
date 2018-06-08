@@ -6,10 +6,10 @@
     </feature>
     <name>PhillyGoFlow</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A Radio
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="contact@ParnellKelley.com" href="http://www.ParnellKelley.com">
+        Parnell Kelley
     </author>
     <content src="index.html" />
     <access origin="*" />

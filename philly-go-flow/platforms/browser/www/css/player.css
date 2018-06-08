@@ -85,11 +85,6 @@
  * -------------------------- */
 [class^="icon-"],
 [class*=" icon-"] {
-  /* font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  *margin-right: .3em; */
   cursor          : pointer;
   height          : 60px;
   transform       : rotate(-0deg);
@@ -119,25 +114,6 @@
   vertical-align: -10%;
   font-size: 1.3333333333333333em;
 }
-/* makes sure icons active on rollover in links */
-/* a [class^="icon-"],
-a [class*=" icon-"],
-a [class^="icon-"]:before,
-a [class*=" icon-"]:before {
-  display: inline;
-  color: black;
-} */
-/* increased font size for icon-large */
-/* [class^="icon-"].icon-fixed-width,
-[class*=" icon-"].icon-fixed-width {
-  display: inline-block;
-  width: 1.2857142857142858em;
-  text-align: center;
-} */
-/* [class^="icon-"].icon-fixed-width.icon-large,
-[class*=" icon-"].icon-fixed-width.icon-large {
-  width: 1.5714285714285714em;
-} */
 ul.icons-ul {
   list-style-type: none;
   text-indent: -0.7142857142857143em;
@@ -574,9 +550,9 @@ ul.icons-ul > li .icon-li {
   text-align: center;
 }
 #rj-player .player-v3 #rj-cover a img {
-  display: inline;
+  /* display: inline;
   width: 55%;
-  height: 69%;
+  height: 69%; */
 }
 
 #rj-player .player-v3.player-medium #rj-cover {

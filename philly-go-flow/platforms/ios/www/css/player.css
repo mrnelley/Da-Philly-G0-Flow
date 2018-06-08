@@ -85,12 +85,23 @@
  * -------------------------- */
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  *margin-right: .3em;
+  cursor          : pointer;
+  height          : 60px;
+  transform       : rotate(-0deg);
+  transform-origin: center left;
+  width           : 60px;
+
+}
+
+.volume-icon-bg{
+  fill      : #cbc8ce;
+  transition: fill 300ms;
+}
+
+&:hover .volume-icon-bg{
+  fill: #b6aebf;
+}
+
 }
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
@@ -102,24 +113,6 @@
 .icon-large:before {
   vertical-align: -10%;
   font-size: 1.3333333333333333em;
-}
-/* makes sure icons active on rollover in links */
-a [class^="icon-"],
-a [class*=" icon-"],
-a [class^="icon-"]:before,
-a [class*=" icon-"]:before {
-  display: inline;
-}
-/* increased font size for icon-large */
-[class^="icon-"].icon-fixed-width,
-[class*=" icon-"].icon-fixed-width {
-  display: inline-block;
-  width: 1.2857142857142858em;
-  text-align: center;
-}
-[class^="icon-"].icon-fixed-width.icon-large,
-[class*=" icon-"].icon-fixed-width.icon-large {
-  width: 1.5714285714285714em;
 }
 ul.icons-ul {
   list-style-type: none;
@@ -449,26 +442,8 @@ ul.icons-ul > li .icon-li {
   margin: 0;
 }
 #rj-player .rjp-player-container {
-  height: 80px;
-  overflow: hidden;
-  position: relative;
-}
-#rj-player .rjp-player-container .jp-play,
-#rj-player .rjp-player-container .jp-pause {
-  background: #6b5d56;
-  color: #ffffff;
-  display: block;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 2.2;
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  border-radius: 500px;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  margin: 10%;
 }
 #rj-player .rjp-player-container .jp-play:active,
 #rj-player .rjp-player-container .jp-pause:active,
@@ -555,72 +530,37 @@ ul.icons-ul > li .icon-li {
 #rj-player a.jp-unmute:hover {
   text-decoration: none !important;
 }
-#rj-player .player-v3 {
-  background: #f0edeb;
-  height: 210px;
-}
+
 #rj-player .player-v3 .rjp-label {
   color: #b74525;
 }
+
 #rj-player .player-v3 #rj-cover {
   float: left;
-  width: 210px;
-  height: 210px;
-  overflow: hidden;
-  background: #eae4e0;
-  background-clip: content-box;
+  width: 100vw;
+  height: 40vh;
+  background: linear-gradient(to bottom, #ffffff 0%, #996600 198%);
   text-align: center;
+  box-sizing: border-box;
 }
+
 #rj-player .player-v3 #rj-cover a {
   display: inline;
   line-height: 210px;
   text-align: center;
 }
 #rj-player .player-v3 #rj-cover a img {
-  display: inline;
-  width: 210px;
-  height: 210px;
-  vertical-align: middle;
+  /* display: inline;
+  width: 55%;
+  height: 69%; */
 }
-#rj-player .player-v3 .info {
-  position: relative;
-  height: 210px;
-}
-#rj-player .player-v3 .rjp-player-container {
-  bottom: 0;
-  left: 210px;
-  position: absolute;
-  height: 80px;
-  width: 710px;
-}
-#rj-player .player-v3.player-medium {
-  width: 650px;
-  height: 210px;
-}
-#rj-player .player-v3.player-medium .rjp-player-container {
-  left: 0;
-}
+
 #rj-player .player-v3.player-medium #rj-cover {
   width: 210px;
   height: 210px;
   float: left;
 }
-#rj-player .player-v3.player-medium .info {
-  position: relative;
-  float: left;
-  width: 440px;
-  height: 210px;
-}
-#rj-player .player-v3.player-medium .rjp-player-container {
-  width: 440px;
-  height: 80px;
-  position: absolute;
-}
-#rj-player .player-v3 .rjp-player-container .jp-play,
-#rj-player .player-v3 .rjp-player-container .jp-pause {
-  margin-left: 20px;
-  left: auto;
-}
+
 #rj-player .player-v3 .rjp-player-container .jp-mute,
 #rj-player .player-v3 .rjp-player-container .jp-unmute {
   right: auto;

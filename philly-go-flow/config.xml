@@ -2,10 +2,10 @@
 <widget id="com.example.go" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>PhillyGoFlow</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A Radio
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="contact@ParnellKelley.com" href="http://www.ParnellKelley.com">
+        Parnell Kelley
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
@@ -22,6 +22,11 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <gap:config-file overwrite="true" parent="UIBackgroundModes" platform="ios">
+            <array>
+                <string>audio</string>
+            </array>
+        </gap:config-file>
     </platform>
     <engine name="ios" spec="^4.5.4" />
     <engine name="android" spec="^7.0.0" />

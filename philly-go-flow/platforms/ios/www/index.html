@@ -29,32 +29,73 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
-  <link rel="stylesheet" type="text/css" href="css/index.css"/>
-  <link rel="stylesheet" type="text/css" href="css/player.css"/>
+  <link rel="stylesheet" type="text/css" href="css/player.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alike+Angular|Asul|BioRhyme|Black+Ops+One|Bungee|Bungee+Shade|Concert+One|Creepster|Eczar|Ewert|Fruktur|Gravitas+One|Kavoon|Monoton|Neuton|Rubik:900|Space+Mono|Tillana|Vollkorn|Work+Sans" rel="stylesheet">
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/rjp.min.js"></script>
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/custom.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+
   <title>Philly Go Flow</title>
 </head>
 
 <body>
-  <div>
-    Play
+  <div id="rj-player">
+    <div class="player-v3">
+      <div id="rj-cover">
+        <a href="#"><div><img src="./img/PGF.png"/></div></a>
+      </div>
+      <div class="info">
+        <div class="rjp-trackinfo-container">
+          <h4 class="rjp-label">Now playing:</h4>
+          <p id="trackInfo" class="rjp-info"></p>
+        </div>
+        <div class="rjp-player-container">
+          <div id="rjp-radiojar-player"></div>
+          <div id="rj-player-controls" class="rj-player-controls">
+            <div class="jp-gui jp-interface">
+              <div class="jp-controls">
+                <a href="javascript:;" style="display:block" class="jp-play  play" title="Play"></a>
+                <a href="javascript:;" class="jp-pause" title="Pause">
+                  <div class="button-container">
+                    <i class="button pause-button play-pause"></i>
+                  </div>
+                </a>
+                <audio src="http://stream.radiojar.com/uzg3ga4mb"></audio>
+              </div>
+              <br>
+              <div class="volume-control">
+                <!-- <a href="javascript:;" style="display:block" class="jp-mute" title="Mute">
+                  <i class="icon-volume-up volume-icon-bg"></i>
+                </a>
+                <a href="javascript:;" style="display:block" class="jp-unmute" title="Unmute">
+                  <i class="icon-volume-off volume-icon-bg"></i>
+                </a> -->
+                <!-- <a href="javascript:;" class="jp-mute"  style="display:block" title="Mute"><i class="icon-volume-up"></i></a>
+               <a href="javascript:;" class="jp-unmute" style="display:none" title="Unmute"><i class="icon-volume-off"></i></a> -->
+              </div>
+              <div class="jp-volume-bar-wrapper">
+                <div class="jp-volume-bar">
+                  <div class="jp-volume-bar-value"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div id='player'class="">
-    <button class="button play" href="#" >
-      <audio preload="none" type="audio/mpeg" src="http://stream.radiojar.com/uzg3ga4mb">
 
-      </audio>
-    </button>
-  </div>
-  <script type="text/javascript" src="cordova.js"></script>
-  <script type="text/javascript" src="js/custom.js" charset="utf-8"></script>
-  <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
